@@ -246,7 +246,7 @@ def download_file(main_url, backup_url, save_path):
                 pass
         raise RuntimeError(f"Download {os.path.basename(save_path)} from backup URL failed: {str(e)}")
 
-def init_pipeline(mode, device):
+def init_pipeline(mode, device, dtype):
     model_path = os.path.join(folder_paths.models_dir, "FlashVSR")
 
     if not os.path.exists(model_path):
